@@ -1,0 +1,15 @@
+function quad_midpoint(f, a, b, N)
+
+x_vector = zeros(N);
+h = (b-a)/N; 
+for i = 1:N
+    x_vector(i) = (i-1/2)*h;
+    
+end
+
+f(a)
+f(b)
+
+
+
+end

@@ -1,0 +1,15 @@
+function quad_trapezoidal(f, a, b, N)
+h = (b-a)/N; 
+area_vector = zeros(N);
+for i = 1:N+1
+    x_i = (i-1)*h;
+    if (1 < i)&&(i < N+1)
+        w = h;
+    else
+        w = h/2;
+    end
+    area_vector(i) = f(x_i)*h;
+end
+sum(area_vector)
+
+end
